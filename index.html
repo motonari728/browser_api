@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+    <title>Hello World</title>
+
+    <style>
+      body {
+        border: 1px solid black;
+      }
+      button:disabled {
+        display: none;
+      }      
+      iframe {
+        width: 100% !important;
+        height: 600px;
+      }
+
+    </style>
+
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
+         so we use a script file. -->
+    <script src="app.js" defer></script>
+
+  </head>
+
+  <body>
+    <header>
+      <input id="url">
+      <button id="go">Go</button>
+      <button id="stop">Stop</button>
+    </header>
+
+    <iframe src="about:blank" mozbrowser remote></iframe>
+  </body>
+
+</html>
